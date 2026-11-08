@@ -7,7 +7,16 @@ import Sketch from '@site/src/components/Sketch';
 
 # Projets, sites et formulaires
 
-Adresse : `/projets`. Le menu dit **Projets & Formulaires**. Le titre de la page est **Projets, sites et formulaires**.
+Le menu dit **Projets & Formulaires**. Le titre de la liste est **Projets, sites et formulaires**. Chaque niveau a sa propre adresse. Le fil d’Ariane reprend **Projets & Formulaires**, puis **Projet**, **Site** et **Formulaire**.
+
+| Écran | Adresse |
+| --- | --- |
+| Liste des projets | `/projets` |
+| Sites d’un projet | `/projets/{projet}` |
+| Formulaires d’un site | `/projets/{projet}/sites/{site}` |
+| Un formulaire | `/projets/{projet}/sites/{site}/formulaires/frm_…` |
+
+`{projet}` et `{site}` sont les identifiants internes. `frm_…` est la clé publique du formulaire.
 
 <Sketch scene="projets" />
 
@@ -15,13 +24,46 @@ Un projet est un conteneur. Vous le créez à la main, avec un nom et, si vous v
 
 Dans un projet, vous ajoutez autant de **sites** que nécessaire. Chaque site porte une adresse (`https://client.com`) et la liste des origines autorisées. L’adresse saisie autorise aussi la variante `www`. Vous pouvez ajouter d’autres origines, séparées par des virgules, par exemple `http://localhost:3000`.
 
-Chaque site contient ses **formulaires**. Un formulaire a une clé publique `frm_…`, des champs (prénom, nom, courriel, téléphone, entreprise, budget, message), et deux portes d’entrée : l’embed dans la page, et l’API signée depuis le serveur du site.
+Chaque site contient ses **formulaires**. Un formulaire a une clé publique `frm_…` et deux portes d’entrée : l’embed dans la page, et l’API signée depuis le serveur du site. Les champs se règlent sur la fiche du formulaire.
 
 La discussion interne de l’équipe reste sur la fiche du projet. Le bandeau dit **Confidentiel**.
 
 ## Sites
 
 Un site est **Actif** ou **En pause**. En pause, ni l’embed ni l’API n’acceptent de demande. Retirer un site retire aussi ses formulaires. Retirer le projet retire ses sites et ses formulaires.
+
+## Champs du formulaire
+
+Sur `/projets/{projet}/sites/{site}/formulaires/frm_…`, le bloc **Champs du formulaire** change les questions posées au visiteur.
+
+Vous pouvez renommer le formulaire, écrire la phrase sous le titre, ajouter un champ, le retirer, le monter ou le descendre. Chaque champ a un libellé, un identifiant, un type, un texte d’exemple et une case **Obligatoire**.
+
+| Type affiché | Valeur envoyée |
+| --- | --- |
+| Texte | `text` |
+| Courriel | `email` |
+| Téléphone | `tel` |
+| Nombre | `number` |
+| Texte long | `textarea` |
+| Liste | `select` |
+
+Une liste prend une option par ligne. L’**Aperçu** montre l’embed. Il n’envoie rien. **Enregistrer les champs** écrit le formulaire.
+
+Un formulaire nouveau commence avec prénom, nom, courriel, téléphone, entreprise, budget et message. Vous pouvez tout changer, dans la limite de **24 champs**. Un champ **Courriel** reste obligatoire : une demande sans courriel est refusée.
+
+Les identifiants reconnus remplissent la fiche client : `email`, `firstName`, `lastName`, `phone`, `company`, `budget`, `message`. Le libellé **Courriel** propose `email`, **Téléphone** propose `phone`. Un autre identifiant est conservé dans la note du contact, sous la forme `Libellé : valeur`.
+
+## Le Petit Coco
+
+Sur ces adresses, Le Petit Coco affiche **Ajouter @page**. Le jeton montre la route ouverte, par exemple `/projets/{projet}/sites/{site}/formulaires/frm_…`. Le message emporte le contenu de la page : le projet, le site, et les formulaires ou les champs.
+
+Sur la page d’un site, vous pouvez demander de créer un formulaire ou d’en modifier un déjà listé. Sur la fiche d’un formulaire, la demande met à jour celui-là, et l’éditeur se recharge.
+
+Un tableau collé est appliqué tel quel. Les colonnes lues sont le libellé, l’identifiant, le type HTML (`text`, `text (default)`, `email`, `textarea`, `select`) et `Yes` ou `No`. Le lien de la fiche, par exemple `https://crm.cocoinbox.com/projets/…/formulaires/frm_…`, désigne le formulaire même si la phrase ne dit pas « modifie ». Une liste sans options est quand même enregistrée. Un champ dont le libellé contient « honeypot » devient un leurre invisible : le visiteur ne le voit pas, et une demande qui le remplit n’est pas créée.
+
+Exemple : « ajoute un téléphone obligatoire et une liste Service avec Conseil, Intégration, Support ».
+
+Le secret API n’est pas écrit dans la réponse. Il s’affiche une seule fois sur la fiche du formulaire, comme à la création. Une question qui ne change pas le formulaire reçoit seulement la page comme contexte.
 
 ## Embed
 
@@ -70,6 +112,6 @@ Les appels publics sont limités : 30 handshakes embed par minute, 60 handshakes
 
 ## Ce que devient une demande
 
-Une demande acceptée crée un contact, source **Formulaire du site**, rattaché au projet et à la clé du formulaire. Le courriel est obligatoire. Le flux **Nouveau client** peut alors partir, comme pour une fiche créée dans le CRM.
+Une demande acceptée crée un contact, source **Formulaire du site**, rattaché au projet et à la clé du formulaire. Le courriel est obligatoire. Les champs dont l’identifiant n’est pas reconnu sont recopiés dans la note du contact. Le flux **Nouveau client** peut alors partir, comme pour une fiche créée dans le CRM.
 
 Le formulaire hébergé `/form/[slug]`, celui de la configuration, est une autre porte. Il est décrit dans [Pages publiques](./pages-publiques).

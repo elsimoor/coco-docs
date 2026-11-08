@@ -62,6 +62,8 @@ Le menu est le même cadre pour les deux produits. Un champ **Rechercher un écr
 | Plateforme Coco Connect | `/connect` | Coco Connect |
 | Boîte de réception (Connect) | `/boite` | Coco Connect |
 
+Ouvrir un projet, un site ou un formulaire quitte la liste. Les adresses sont dans [Projets, sites et formulaires](../coco-sells/projets).
+
 ### Outils
 
 | Écran | Adresse |
