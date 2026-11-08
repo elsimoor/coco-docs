@@ -13,9 +13,9 @@ Ce site explique les deux produits tels qu’ils apparaissent dans l’applicati
 
 <Sketch scene="home" />
 
-**Coco Sells** couvre la vente et la facturation : pipeline, devis, factures, achats, trésorerie, rapports et objectifs.
+**Coco Sells** couvre la vente et la facturation : pipeline, devis, factures, achats, trésorerie, rapports, projets et formulaires de sites.
 
-**Coco Connect** couvre les échanges : boîte de réception, discussion d’équipe, projets, tâches du jour, assistance, documents et visibilité Google.
+**Coco Connect** couvre les échanges : boîte de réception, discussion d’équipe, tâches du jour, assistance, documents et visibilité Google.
 
 Les deux produits partagent le même espace entreprise, les mêmes contacts et le même moteur de chiffres. Un montant en euro n’est jamais additionné à un montant en dirham.
 

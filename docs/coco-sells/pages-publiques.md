@@ -29,4 +29,4 @@ Adresse : `/form/[slug]`.
 
 Formulaire hébergé par Coco, à l’adresse de l’espace. Une réponse peut créer un contact ou déclencher le flux **Webhook entrant**. Le contact arrive dans Clients & Contacts, avec la source du formulaire.
 
-Les formulaires posés sur les sites du client sont ailleurs : [Projets, sites et formulaires](../coco-connect/projets). Chacun s’intègre par un embed limité aux origines du site, ou par une API signée.
+Les formulaires posés sur les sites du client sont ailleurs : [Projets, sites et formulaires](./projets). Chacun s’intègre par un embed limité aux origines du site, ou par une API signée.

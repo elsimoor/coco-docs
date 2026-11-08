@@ -20,8 +20,8 @@ const SCENES: Record<string, Scene> = {
     kind: 'cards',
     title: 'Deux produits, un seul espace',
     cards: [
-      { k: 'Coco Sells', v: 'Ventes', h: 'Pipeline, devis, factures', tone: 'accent' },
-      { k: 'Coco Connect', v: 'Échanges', h: 'Boîte, tâches, projets', tone: 'good' },
+      { k: 'Coco Sells', v: 'Ventes', h: 'Pipeline, devis, projets', tone: 'accent' },
+      { k: 'Coco Connect', v: 'Échanges', h: 'Boîte, tâches, assistance', tone: 'good' },
       { k: 'Devises', v: 'EUR · MAD', h: 'Jamais additionnées' },
     ],
   },

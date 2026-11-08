@@ -14,8 +14,8 @@ Le sélecteur en haut du menu porte le nom du produit ouvert.
 
 | Produit | Sous-titre | Usage |
 | --- | --- | --- |
-| Coco Sells | Ventes & Facturation | Pipeline, devis, factures, achats, trésorerie, pilotage |
-| Coco Connect | Boîte & Échanges | Messagerie, équipe, projets, tâches, assistance |
+| Coco Sells | Ventes & Facturation | Pipeline, devis, factures, achats, trésorerie, projets et formulaires, pilotage |
+| Coco Connect | Boîte & Échanges | Messagerie, équipe, tâches, assistance |
 
 Changer de produit enregistre la page en cours. Au retour, Coco rouvre la dernière page de ce produit. La page d’accueil de Coco Sells est la Vue d’ensemble. Celle de Coco Connect est la plateforme Connect.
 
@@ -54,7 +54,7 @@ Le menu est le même cadre pour les deux produits. Un champ **Rechercher un écr
 | --- | --- | --- |
 | Équipe & Collaborateurs | `/workforce` | Coco Sells |
 | Flux de travail (Workflows) | `/workflows` | Coco Sells |
-| Projets & Formulaires | `/projets` | Coco Connect |
+| Projets & Formulaires | `/projets` | Coco Sells |
 | Tâches du jour (Matin) | `/projects` | Coco Connect |
 | Visibilité Google (Search Console) | `/search-console` | Coco Connect |
 | Documents & Dossiers | `/documents` | Coco Connect |

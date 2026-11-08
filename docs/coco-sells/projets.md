@@ -72,4 +72,4 @@ Les appels publics sont limités : 30 handshakes embed par minute, 60 handshakes
 
 Une demande acceptée crée un contact, source **Formulaire du site**, rattaché au projet et à la clé du formulaire. Le courriel est obligatoire. Le flux **Nouveau client** peut alors partir, comme pour une fiche créée dans le CRM.
 
-Le formulaire hébergé `/form/[slug]`, celui de la configuration, est une autre porte. Il est décrit dans [Pages publiques](../coco-sells/pages-publiques).
+Le formulaire hébergé `/form/[slug]`, celui de la configuration, est une autre porte. Il est décrit dans [Pages publiques](./pages-publiques).
