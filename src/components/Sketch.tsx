@@ -341,13 +341,14 @@ const SCENES: Record<string, Scene> = {
     note: 'La page Chat ouvre la plateforme. Le fil utile est sur la fiche.',
   },
   projets: {
-    kind: 'bars',
-    title: 'Projet après-vente',
-    rows: [
-      { k: 'Jalons', w: 75, v: '75 %', green: true },
-      { k: 'Budget', w: 100, v: 'HT du dossier gagné' },
+    kind: 'steps',
+    title: 'Projet, sites, formulaires',
+    steps: [
+      { t: 'Projet', d: 'Autant de sites' },
+      { t: 'Site', d: 'Origines autorisées' },
+      { t: 'Formulaire', d: 'Embed ou API signée' },
     ],
-    note: 'Le projet naît quand le dossier passe Gagné.',
+    note: 'Le secret API ne s’affiche qu’une fois. L’embed refuse toute autre origine.',
   },
   taches: {
     kind: 'cards',

@@ -8,7 +8,9 @@
     "build": "docusaurus build",
     "serve": "docusaurus serve",
     "clear": "docusaurus clear",
-    "typecheck": "tsc"
+    "typecheck": "tsc",
+    "push" : "git add . && git commit -m \"push\" && git push"
+
   },
   "dependencies": {
     "@docusaurus/core": "3.8.1",

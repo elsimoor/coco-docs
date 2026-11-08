@@ -24,7 +24,7 @@ L’adresse `/shared-inbox` affiche un court message puis vous envoie vers la bo
 | --- | --- |
 | Contact et organisation | Clients & Contacts, repris dans les fils de la boîte |
 | Devis et facture | Coco Sells. Les reçus de relance se lisent sur la fiche client |
-| Dossier gagné | Ouvre un projet de réalisation, que vous pouvez aussi créer à la main |
+| Dossier gagné | Reste un dossier Coco Sells. Les sites et formulaires se créent dans [Projets](./projets) |
 | Événement e-mail, SMS, WhatsApp ou chat | Sert aux délais « demande → encaissement » et « vitesse de réponse » |
 
 La bascule de produit est décrite dans [Navigation](../prise-en-main/navigation).

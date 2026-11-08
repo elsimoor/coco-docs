@@ -27,4 +27,6 @@ Un jeton ne donne accès qu’à ce document.
 
 Adresse : `/form/[slug]`.
 
-Formulaire public rattaché à un projet. Une réponse peut créer un contact ou déclencher le flux **Webhook entrant**. Le contact arrive alors dans Clients & Contacts, avec la source du formulaire.
+Formulaire hébergé par Coco, à l’adresse de l’espace. Une réponse peut créer un contact ou déclencher le flux **Webhook entrant**. Le contact arrive dans Clients & Contacts, avec la source du formulaire.
+
+Les formulaires posés sur les sites du client sont ailleurs : [Projets, sites et formulaires](../coco-connect/projets). Chacun s’intègre par un embed limité aux origines du site, ou par une API signée.
