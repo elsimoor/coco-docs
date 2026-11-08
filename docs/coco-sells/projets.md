@@ -34,7 +34,7 @@ Un site est **Actif** ou **En pause**. En pause, ni l’embed ni l’API n’acc
 
 ## Champs du formulaire
 
-Sur `/projets/{projet}/sites/{site}/formulaires/frm_…`, le bloc **Champs du formulaire** change les questions posées au visiteur.
+Sur `/projets/{projet}/sites/{site}/formulaires/frm_…`, la fiche est rangée en quatre onglets : **Settings** (les champs), **Entries** (les demandes reçues, dans un tableau qui défile sur le côté), **Embed**, et **API**.
 
 Vous pouvez renommer le formulaire, écrire la phrase sous le titre, ajouter un champ, le retirer, le monter ou le descendre. Chaque champ a un libellé, un identifiant, un type, un texte d’exemple et une case **Obligatoire**.
 
@@ -59,7 +59,7 @@ Sur ces adresses, Le Petit Coco affiche **Ajouter @page**. Le jeton montre la ro
 
 Sur la page d’un site, vous pouvez demander de créer un formulaire ou d’en modifier un déjà listé. Sur la fiche d’un formulaire, la demande met à jour celui-là, et l’éditeur se recharge.
 
-Un tableau collé est appliqué tel quel. Les colonnes lues sont le libellé, l’identifiant, le type HTML (`text`, `text (default)`, `email`, `textarea`, `select`) et `Yes` ou `No`. Le lien de la fiche, par exemple `https://crm.cocoinbox.com/projets/…/formulaires/frm_…`, désigne le formulaire même si la phrase ne dit pas « modifie ». Une liste sans options est quand même enregistrée. Un champ dont le libellé contient « honeypot » devient un leurre invisible : le visiteur ne le voit pas, et une demande qui le remplit n’est pas créée.
+Un tableau collé est appliqué tel quel. Les colonnes lues sont le libellé, l’identifiant, le type HTML (`text`, `text (default)`, `email`, `textarea`, `select`, `tel`, `number`) et `Yes` ou `No`. Les identifiants et les libellés ne sont pas réécrits : `name` reste `name`, et `text (default)` reste du texte même si le libellé est Téléphone. Le lien de la fiche, par exemple `https://crm.cocoinbox.com/projets/…/formulaires/frm_…`, désigne le formulaire même si la phrase ne dit pas « modifie ». Une liste sans options est quand même enregistrée. Un champ dont le libellé ou l’identifiant contient « honeypot » devient un leurre invisible : le visiteur ne le voit pas, et une demande qui le remplit n’est pas créée. Dans la zone de message, Entrée envoie et Maj+Entrée passe à la ligne.
 
 Exemple : « ajoute un téléphone obligatoire et une liste Service avec Conseil, Intégration, Support ».
 

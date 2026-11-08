@@ -19,6 +19,7 @@ Un flux part d’un événement, passe par des conditions, et exécute des actio
 | --- | --- |
 | Nouveau courriel | expéditeur, nom, objet, message, société |
 | Nouveau client | nom, courriel, téléphone, société, pays, ville, besoin, projet |
+| Nouvelle entrée de formulaire | nom, courriel, téléphone, société, message, projet, site, formulaire. Le déclencheur peut viser toutes les entrées, un projet, un site de ce projet, ou un seul `frm_…` |
 | Nouvelle tâche | titre, description, projet |
 | Étape de dossier | dossier, client, étape, montant |
 | Webhook entrant | corps JSON, courriel, nom, événement, données |
