@@ -32,6 +32,7 @@ const sidebars: SidebarsConfig = {
         'coco-sells/equipe',
         'coco-sells/workflows',
         'coco-sells/projets',
+        'coco-sells/studio-mcp',
         'coco-sells/recherche',
         'coco-sells/domaines',
         'coco-sells/warmup',

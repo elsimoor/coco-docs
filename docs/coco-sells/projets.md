@@ -61,6 +61,8 @@ Deux outils. `studio_next` ne écrit rien : il pose une seule question, d’abor
 
 Les identifiants et les types restent ceux du site. `text (default)` reste du texte. Une liste sans options est gardée. Un honeypot devient un leurre invisible.
 
+Le texte à coller dans l’autre modèle est sur [Brief pour un autre modèle](./studio-mcp).
+
 ## Le Petit Coco
 
 Sur ces adresses, Le Petit Coco affiche **Ajouter @page**. Le jeton montre la route ouverte, par exemple `/projets/{projet}/sites/{site}/formulaires/frm_…`. Le message emporte le contenu de la page : le projet, le site, et les formulaires ou les champs.
