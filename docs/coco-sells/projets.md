@@ -53,6 +53,14 @@ Un formulaire nouveau commence avec prénom, nom, courriel, téléphone, entrepr
 
 Les identifiants reconnus remplissent la fiche client : `email`, `firstName`, `lastName`, `phone`, `company`, `budget`, `message`. Le libellé **Courriel** propose `email`, **Téléphone** propose `phone`. Un autre identifiant est conservé dans la note du contact, sous la forme `Libellé : valeur`.
 
+## Studio MCP
+
+Un modèle peut brancher le studio sur `POST /api/mcp/forms`. L’en-tête est la clé d’entreprise `x-cocoinbox-api-key`, ou un jeton Bearer. Le protocole est MCP : `initialize`, puis `tools/list`, puis `tools/call`.
+
+Deux outils. `studio_next` ne écrit rien : il pose une seule question, d’abord le projet (le même, un nouveau, ou un existant), puis le site, puis le formulaire, puis les champs copiés du site. `studio_apply` n’enregistre qu’après un oui, avec `confirmed: true`.
+
+Les identifiants et les types restent ceux du site. `text (default)` reste du texte. Une liste sans options est gardée. Un honeypot devient un leurre invisible.
+
 ## Le Petit Coco
 
 Sur ces adresses, Le Petit Coco affiche **Ajouter @page**. Le jeton montre la route ouverte, par exemple `/projets/{projet}/sites/{site}/formulaires/frm_…`. Le message emporte le contenu de la page : le projet, le site, et les formulaires ou les champs.
